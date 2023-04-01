@@ -16,10 +16,14 @@ const images = [
 const gallery = document.querySelector(".gallery");
 images.forEach((element) => {
   gallery.insertAdjacentHTML("beforeend", `<li>
-    <img
+    <img width = '500'
       src=${element.url} 
       alt="${element.alt}" 
     />
-  </li>`);
-});
-
+  </li>`)
+})
+gallery.style.display = 'flex';
+gallery.style.flexWrap = 'column-reverse'
+gallery.style.listStyle = 'none'
+gallery.style.gap = '20px'
+gallery.style.justifyContent = 'center'
